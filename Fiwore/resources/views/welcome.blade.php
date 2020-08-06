@@ -121,7 +121,7 @@
         </style>
     </head>
     <body style="background-image: url({{ asset('costem_asset/bootstrap') }}/b.jpg); background-size: cover;">
-        <div class="flex-center position-ref full-height">
+        <div class="flex-center position-ref full-height"><!--bagian yang diubah-->
             <nav class="navbar navbar-expand-lg navbar-light bg-lightblue">
                 <a class="navbar-brand" href="#" style="font-weight: bold;"><i style="font-size: 40px;">F</i>iwore</a>
 
