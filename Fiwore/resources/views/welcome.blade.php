@@ -120,35 +120,48 @@
             }
         </style>
     </head>
-    <body style="background-image: url({{ asset('costem_asset/bootstrap') }}/b.jpg); background-size: cover;">
-        <div class="flex-center position-ref full-height"><!--bagian yang diubah-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-lightblue">
-                <a class="navbar-brand" href="#" style="font-weight: bold;"><i style="font-size: 40px;">F</i>iwore</a>
 
-                <div class="collapse navbar-collapse" id="navbarNav" >
-                  <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <div class="home">
-                            <a class="nav-link" href="index.html" style="color: black;" >Home <span class="sr-only">(current)</span></a>
-                        </div>
-                    </li>
-                    <div class="log">
-                    <li class="nav-item" >
-                      <a class="nav-link" href="login.html" style="color: black;">Log in</a>
-                    </li>
+    <body style=" background-image: url({{ asset('costem_asset/bootstrap') }}/try.jpg); background-size: cover;">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="http://localhost:8000">
+                    <label for="" style="font-weight: bold; "><i style="font-size: 30px;">F</i>iwore</label>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav mr-auto">
+
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @if (Route::has('login'))
+                        @auth
+                        <a href="{{ url('/home') }}">Home</a>
+                    @else
+
+                                                    <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">Login</a>
+                            </li>
+
+                            @if (Route::has('register'))
+                                                            <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">Register</a>
+                                </li>
+                                @endif
+                                @endauth
+                                @endif
+                                                                        </ul>
                 </div>
-                <div class="sign">
-                     <li class="nav-item ">
-                      <a class="nav-link" href="sign.html" style="color: black;">Sign up</a>
-                    </li>
-                </div>
-                <div>
-                  <button class="navbar-toggler-icon" style="position: absolute; right: 10px; top: 5px;"></button>
-                </div>
-                  </ul>
-                </div>
-              </nav>
-            @if (Route::has('login'))
+            </div>
+        </nav>
+
+           {{-- @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
@@ -160,12 +173,41 @@
                         @endif
                     @endauth
                 </div>
-            @endif
+            @endif --}}
+
+{{--
+        <nav class="navbar navbar-expand-lg navbar-light bg-lightblue">
+            <a class="navbar-brand" href="#" style="font-weight: bold;"><i style="font-size: 40px;">F</i>iwore</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarNav" >
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <div class="home">
+                        <a class="nav-link" href="index.html" style="color: black; " >Home <span class="sr-only">(current)</span></a>
+                    </div>
+                </li>
+                <div class="log" id="log">
+                <li class="nav-item" >
+                    <a class="nav-link" href="http://localhost:8000/login" style="color: black;">Login</a>
+                </li>
+            </div>
+            <div class="sign">
+                 <li class="nav-item ">
+                  <a class="nav-link" href="http://localhost:8000/register" style="color: black;">Register</a>
+                </li>
+            </div>
+              </ul>
+            </div>
+          </nav>
+ --}}
+
+    </body>
 
 
-        </head>
 
-            <header>
+            {{-- <header> --}}
                 {{-- <nav class="navbar navbar-expand-lg navbar-light bg-lightblue">
                     <a class="navbar-brand" href="#" style="font-weight: bold;"><i style="font-size: 40px;">F</i>iwore</a>
 
@@ -194,7 +236,7 @@
                   </nav>
             </header> --}}
 
-        </body>
+        {{-- </body> --}}
 
             {{-- <div class="content">
                 <div class="title m-b-md">
