@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 class DataUserModel
 {
+    public $timestamps = false;
+
     public static function get_data_user($tabel)
     {
         return $data=ORM_DataUserModel::all();
@@ -39,6 +41,7 @@ class DataUserModel
         $new_save->jurusan=$data->jurusan;
         $new_save->tampat_pkl=$data->tampat_pkl;
         $new_save->lama_pkl=$data->lama_pkl;
+
         $new_save->save();
     }
 }
