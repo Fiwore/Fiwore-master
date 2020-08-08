@@ -25,7 +25,7 @@ class DataUserModel
 
         // \dd($data);
     }
-    public static function save($data)
+    public static function save(Request $data)
     {
         // \dd($data);
         $new_save = new ORM_DataUserModel;
@@ -39,6 +39,6 @@ class DataUserModel
         $new_save->jurusan=$data->jurusan;
         $new_save->tampat_pkl=$data->tampat_pkl;
         $new_save->lama_pkl=$data->lama_pkl;
-        $new_save->save();
+        $new_save->save(new Request);
     }
 }
