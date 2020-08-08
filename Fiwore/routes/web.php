@@ -17,10 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/Mysite','SiteController@index');
-
+Route::get('/Mysite', 'SiteController@index');
+Route::post('/Mysite', 'SiteController@kirim');
+Route::get('/Mysite/user', 'SiteController@get_all');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-

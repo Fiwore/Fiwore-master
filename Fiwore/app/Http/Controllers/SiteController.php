@@ -3,11 +3,39 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
+use App\Models\DataUserModel;
 
 class SiteController extends Controller
 {
     public function index()
     {
-        return \view('situs/one');
+        echo $email=Auth::user()->email;
+        $tabel=$email;
+        $data=DataUserModel::get_like($tabel);
+        // echo $data->email_user;
+
+        if ($data) {
+            echo 'sama';
+        } else {
+            echo 'beda';
+        }
+        return \view('situs.fixdata');
+    }
+    public function kirim()
+    {
+        $data=$_POST;
+        DataUserModel::save($data);
+        return redirect('/Mysite');
+    }
+
+    public function get_all()
+    {
+        $tabel='userdata';
+        $data['all']=DataUserModel::get_data_user($tabel);
+
+        foreach ($data['all'] as $data) {
+            echo $data->nisn;
+        }
     }
 }

@@ -140,120 +140,23 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        @if (Route::has('login'))
+                    @if (Route::has('login'))
                         @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-
-                                                    <li class="nav-item">
+                           <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">Login</a>
                             </li>
 
                             @if (Route::has('register'))
-                                                            <li class="nav-item">
+                                <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">Register</a>
                                 </li>
-                                @endif
-                                @endauth
-                                @endif
-                                                                        </ul>
+                            @endif
+                        @endauth
+                    @endif
                 </div>
             </div>
         </nav>
-
-           {{-- @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif --}}
-
-{{--
-        <nav class="navbar navbar-expand-lg navbar-light bg-lightblue">
-            <a class="navbar-brand" href="#" style="font-weight: bold;"><i style="font-size: 40px;">F</i>iwore</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            <div class="collapse navbar-collapse" id="navbarNav" >
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <div class="home">
-                        <a class="nav-link" href="index.html" style="color: black; " >Home <span class="sr-only">(current)</span></a>
-                    </div>
-                </li>
-                <div class="log" id="log">
-                <li class="nav-item" >
-                    <a class="nav-link" href="http://localhost:8000/login" style="color: black;">Login</a>
-                </li>
-            </div>
-            <div class="sign">
-                 <li class="nav-item ">
-                  <a class="nav-link" href="http://localhost:8000/register" style="color: black;">Register</a>
-                </li>
-            </div>
-              </ul>
-            </div>
-          </nav>
- --}}
-
     </body>
-
-
-
-            {{-- <header> --}}
-                {{-- <nav class="navbar navbar-expand-lg navbar-light bg-lightblue">
-                    <a class="navbar-brand" href="#" style="font-weight: bold;"><i style="font-size: 40px;">F</i>iwore</a>
-
-                    <div class="collapse navbar-collapse" id="navbarNav" >
-                      <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <div class="home">
-                                <a class="nav-link" href="index.html" style="color: black;" >Home <span class="sr-only">(current)</span></a>
-                            </div>
-                        </li>
-                        <div class="log">
-                        <li class="nav-item" >
-                          <a class="nav-link" href="login.html" style="color: black;">Log in</a>
-                        </li>
-                    </div>
-                    <div class="sign">
-                         <li class="nav-item ">
-                          <a class="nav-link" href="sign.html" style="color: black;">Sign up</a>
-                        </li>
-                    </div>
-                    <div>
-                      <button class="navbar-toggler-icon" style="position: absolute; right: 10px; top: 5px;"></button>
-                    </div>
-                      </ul>
-                    </div>
-                  </nav>
-            </header> --}}
-
-        {{-- </body> --}}
-
-            {{-- <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body> --}}
 </html>
