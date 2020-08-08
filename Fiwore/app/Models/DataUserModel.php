@@ -39,6 +39,6 @@ class DataUserModel
         $new_save->jurusan=$data->jurusan;
         $new_save->tampat_pkl=$data->tampat_pkl;
         $new_save->lama_pkl=$data->lama_pkl;
-        $new_save->save(new Request);
+        $new_save->save();
     }
 }
