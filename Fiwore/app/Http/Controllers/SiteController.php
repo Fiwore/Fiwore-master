@@ -25,7 +25,7 @@ class SiteController extends Controller
     public function kirim()
     {
         $data=$_POST;
-        DataUserModel::save($data);
+        DataUserModel::save(new Request);
         return redirect('/Mysite');
     }
 
