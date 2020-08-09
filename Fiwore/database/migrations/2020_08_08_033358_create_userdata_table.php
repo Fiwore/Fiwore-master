@@ -24,6 +24,7 @@ class CreateUserdataTable extends Migration
             $table->string('jurusan');
             $table->string('tampat_pkl');
             $table->string('lama_pkl');
+            $table->timestamps();
         });
     }
 

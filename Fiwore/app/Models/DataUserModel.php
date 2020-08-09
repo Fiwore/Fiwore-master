@@ -29,18 +29,18 @@ class DataUserModel
     }
     public static function save($data)
     {
-        // $new_save = new ORM_DataUserModel;
+        $new_save = new ORM_DataUserModel;
 
-        // $new_save->nama=$data->nama;
-        // $new_save->nisn=$data->nisn;
-        // $new_save->email_user=$data->email_user;
-        // $new_save->alamat_tinggal=$data->alamat_tinggal;
-        // $new_save->no_hp=$data->no_hp;
-        // $new_save->nama_orang_tua=$data->nama_orang_tua;
-        // $new_save->jurusan=$data->jurusan;
-        // $new_save->tampat_pkl=$data->tampat_pkl;
-        // $new_save->lama_pkl=$data->lama_pkl;
+        $new_save->nama=$data['nama'];
+        $new_save->nisn=$data['nisn'];
+        $new_save->email_user=$data['email_user'];
+        $new_save->alamat_tinggal=$data['alamat_tinggal'];
+        $new_save->no_hp=$data['no_hp'];
+        $new_save->nama_orang_tua=$data['nama_orang_tua'];
+        $new_save->jurusan=$data['jurusan'];
+        $new_save->tampat_pkl=$data['tampat_pkl'];
+        $new_save->lama_pkl=$data['lama_pkl'];
 
-        // $new_save->save();
+        $new_save->save();
     }
 }
