@@ -29,7 +29,7 @@ class SiteController extends Controller
     {
 
         $data=$_POST;
-        DataUserModel::save($tabel);
+        DataUserModel::save($data);
         return redirect('/Mysite');
     }
 
